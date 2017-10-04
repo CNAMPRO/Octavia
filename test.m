@@ -1,6 +1,3 @@
-x=0;
-y=f(x)
-x=[-2:0.5:2];
-
-y=feval(@f,x)
-fplot(@f,[-2,2])
+## fonction a la volee
+f=’1./(1+x.^2)’
+fplot(f,[-2,6])
