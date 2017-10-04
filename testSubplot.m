@@ -1,3 +1,4 @@
+figure(1)
 x = [-2:0.5:2]
 subplot(2,3,2)
 
@@ -14,3 +15,7 @@ xlabel('Axe x')
 
 subplot(2,3,6)
 plot(x, sqrt(x))
+
+figure(2)
+x=linspace(0.1,exp(2),200);
+plot(x, log(x));
