@@ -1,4 +1,4 @@
-## Interpolation La grange
+% Interpolation La grange
 function [y]=lagrange(P, x)
   % On reprend le meme principe
   [l,c]=size(P);
