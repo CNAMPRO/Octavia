@@ -1,7 +1,6 @@
 function [x,r,k]=GS(A,b,XINIT,tol,KMAX)
   n = length(b);
   k = 0;
-  XOLD = XINIT;
   x = XINIT;
   r = norm(A*x'-b);
   while((r>=tol) && (k<=KMAX))
@@ -10,7 +9,6 @@ function [x,r,k]=GS(A,b,XINIT,tol,KMAX)
       x(i) = (b(i) - sum(A(i,j).*x(j)))/A(i,i);
     end
     k+=1;
-    XOLD = x;
-    r = norm(A*XOLD'-b);
+    r = norm(A*x'-b);
   end
 end
